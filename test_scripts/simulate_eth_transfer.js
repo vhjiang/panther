@@ -6,13 +6,13 @@ const provider = new ethers.providers.JsonRpcProvider(url);
 const signer = provider.getSigner('0xd8da6bf26964af9d7eed9e03e53415d37aa96045'); // vitalik.eth
 
 const get_balance = async () => {
-    return await provider.getBalance("0x548BAa103d34Db68F98e4FA0cb90738BC5548511")
+    return await provider.getBalance("0x548BAa103d34Db68F98e4FA0cb90738BC5548511") // my account
 }
 
 // Func to send from vitalik.eth to another address
 const transaction = async () => {
     return await signer.sendTransaction({
-        to: '0x548BAa103d34Db68F98e4FA0cb90738BC5548511',
+        to: '0x548BAa103d34Db68F98e4FA0cb90738BC5548511', // my account
         value: '1000000000000000000'
       })
 };
