@@ -5,28 +5,28 @@ panther is an EVM simulator that executes transactions locally on a ganache-fork
 Before start, make sure node.js and npm are installed. Then in panther's main dir:
 
 ```
-npm install # install dependencies
-node index.js # start ganache server
+> npm install # install dependencies
+> node index.js # start ganache server
 ```
 
 ganache server is now started running Ethereum Mainnet forked at the latest block. It will auto restart when each new block is mined. The restart time is quick:
 
-```
-Firing off local ganache fork
-Firing off new local ganache fork @block # 15095658
-RestartGanache: 3.927ms
-Firing off new local ganache fork @block # 15095659
-RestartGanache: 4.653ms
-Firing off new local ganache fork @block # 15095660
-RestartGanache: 3.651ms
-Firing off new local ganache fork @block # 15095661
-RestartGanache: 4.194ms
-Firing off new local ganache fork @block # 15095662
-RestartGanache: 3.45ms
-Firing off new local ganache fork @block # 15095663
-RestartGanache: 3.488ms
-... ...
-```
+
+        Firing off local ganache fork
+        Firing off new local ganache fork @block # 15095658
+        RestartGanache: 3.927ms
+        Firing off new local ganache fork @block # 15095659
+        RestartGanache: 4.653ms
+        Firing off new local ganache fork @block # 15095660
+        RestartGanache: 3.651ms
+        Firing off new local ganache fork @block # 15095661
+        RestartGanache: 4.194ms
+        Firing off new local ganache fork @block # 15095662
+        RestartGanache: 3.45ms
+        Firing off new local ganache fork @block # 15095663
+        RestartGanache: 3.488ms
+        ... ...
+
 
 ### Simulation Tests
 
@@ -35,7 +35,7 @@ RestartGanache: 3.488ms
 One of ganache's fabulous features is `unlockedAccounts`: by unlocking vitalik.eth, you have full access to his account. In `test_scripts/simulate_eth_transfer.js`, let's use vitalik's account to send you some eth:
 
 ```
-node test_scripts/simulate_eth_transfer.js
+> node test_scripts/simulate_eth_transfer.js
 ```
 
 The log will be:
@@ -76,7 +76,7 @@ The log will be:
 As a front runner, we need to get arbitrary tx from mempool, rewrite some part of the tx, then simulate to check if we could get profit. Ganache can help with the simulation.
 
 ```
-node test_scripts/simulate_any_tx.js
+> node test_scripts/simulate_any_tx.js
 ```
 
 The log will be as follows. Check eth balance before and after the tx to see if profitable.
