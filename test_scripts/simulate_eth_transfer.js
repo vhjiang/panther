@@ -17,12 +17,12 @@ const transaction = async () => {
       })
 };
 
-get_balance().then(balance => {
+get_balance().then(balance => { // step 1
     console.log(balance.toString()) // balance before
-    return transaction()
+    return transaction() // step 2
 }).then(tx => {
     console.log(tx)
-    return get_balance()
+    return get_balance() // step 3
 }).then(balance => 
     console.log(balance.toString()) // balance after
 )

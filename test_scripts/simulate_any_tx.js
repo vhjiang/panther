@@ -31,15 +31,15 @@ const get_balance = async () => {
     return await provider.getBalance("0xd8da6bf26964af9d7eed9e03e53415d37aa96045")
 }
 
-get_balance().then(balance => {
+get_balance().then(balance => { // step 1
     console.log(balance.toString()); // balance before
-    return get_transaction()
+    return get_transaction() // step 2
 }).then(previous_tx => {
-    current_tx = rewrite_transaction(previous_tx);
-    return send_transaction(current_tx)
+    current_tx = rewrite_transaction(previous_tx); // step 3
+    return send_transaction(current_tx) // step 4
 }).then(tx => {
     console.log(tx);
-    return get_balance()
+    return get_balance() // step 5
 }).then(balance => {
     console.log(balance.toString()) // balance after
 })
