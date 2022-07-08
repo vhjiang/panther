@@ -9,7 +9,7 @@ Before start, make sure node.js and npm are installed. Then in panther's main di
 > node index.js # start ganache server
 ```
 
-ganache server is now started running Ethereum Mainnet forked at the latest block. It will auto restart when each new block is mined. According to the log, the restart time is quick:
+ganache server is now started, running Ethereum Mainnet forked at the latest block. It will auto restart when each new block is mined. According to the log, the restart time is quick:
 
     logs:
 
@@ -33,7 +33,7 @@ ganache server is now started running Ethereum Mainnet forked at the latest bloc
 
 #### Send ETH using vitalik.eth's account
 
-One of ganache's fabulous features is `unlockedAccounts`: by unlocking vitalik.eth, you have full access to his account. In `test_scripts/simulate_eth_transfer.js`, let's use vitalik's account to send you some eth:
+One of ganache's fabulous features is `unlockedAccounts`: by unlocking arbitrary accounts, you have full access to these accounts. In `test_scripts/simulate_eth_transfer.js`, let's use vitalik's account to send you some eth:
 
 ```
 > node test_scripts/simulate_eth_transfer.js
@@ -85,7 +85,7 @@ As a front runner, we need to get arbitrary tx from mempool, rewrite some part o
 The log will be as follows. Check eth balance before and after the tx to see if profitable.
 
     logs:
-    
+
     your previous balance: 2505200241354634440210
     ======
     tx:
