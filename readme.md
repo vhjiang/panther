@@ -1,6 +1,6 @@
 panther is an EVM simulator that executes transactions locally on a ganache-fork (updated every time a new block is mined). It was inspired by [helios](https://github.com/taarushv/helios). It's built on [ganache](https://github.com/trufflesuite/ganache).
 
-### Start
+### Start Server
 
 Before start, make sure node.js and npm are installed. Then in panther's main dir:
 
@@ -9,7 +9,7 @@ Before start, make sure node.js and npm are installed. Then in panther's main di
 > node index.js # start ganache server
 ```
 
-ganache server is now started, running Ethereum Mainnet forked at the latest block. It will auto restart when each new block is mined. According to the log, the restart time is quick:
+ganache server is now listening on http://127.0.0.1:1337. It's running Ethereum Mainnet forked at the latest block. It will auto restart when each new block is mined. According to the log, the restart time is quick:
 
     logs:
 
