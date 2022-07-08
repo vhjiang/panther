@@ -25,18 +25,18 @@ const ganache_options = {
     }
 };
 
-// // Restart ganache server on every new block mined.
-// provider.on('block', function(blockNumber) {
-//     console.time('Ganache Restart Time Used')
-//     server.close();
-//     console.log("Firing off new local ganache fork @block #", blockNumber)
-//     server = ganache.server({fork: url});
-//     server.listen(1337);
-//     console.timeEnd('Ganache Restart Time Used')
-// });
+// Restart ganache server on every new block mined.
+provider.on('block', function(blockNumber) {
+    console.time('Ganache Restart Time Used')
+    server.close();
+    console.log("Firing off new local ganache fork @block #", blockNumber)
+    server = ganache.server(ganache_options);
+    server.listen(1337);
+    console.timeEnd('Ganache Restart Time Used')
+});
 
 main = () => {
-    console.log("Firing off local ganache fork")
+    console.log("Firing off local ganache fork, server access: http://127.0.0.1:1337")
     server = ganache.server(ganache_options);
     server.listen(1337);
 }
