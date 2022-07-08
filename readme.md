@@ -12,6 +12,7 @@ Before start, make sure node.js and npm are installed. Then in panther's main di
 ganache server is now started running Ethereum Mainnet forked at the latest block. It will auto restart when each new block is mined. According to the log, the restart time is quick:
 
     logs:
+
     Firing off local ganache fork
     Firing off new local ganache fork @block # 15095658
     RestartGanache: 3.927ms
@@ -41,6 +42,7 @@ One of ganache's fabulous features is `unlockedAccounts`: by unlocking vitalik.e
 The log will be:
 
     logs:
+
     your previous balance: 1000000000000000000
     ======
     tx:
@@ -83,6 +85,7 @@ As a front runner, we need to get arbitrary tx from mempool, rewrite some part o
 The log will be as follows. Check eth balance before and after the tx to see if profitable.
 
     logs:
+    
     your previous balance: 2505200241354634440210
     ======
     tx:
